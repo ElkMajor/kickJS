@@ -9,8 +9,8 @@ async function userHasAccess(userBadges, requiredLevel) {
     };
   
     const userHighestBadgeLevel = userBadges.reduce((highestLevel, badge) => {
-      const badgeName = badge.toLowerCase(); // Convert to lowercase for consistency
-      const badgeLevel = badgeLevels[badgeName] || 1; // Default to level 1 if badge not found
+      const badgeName = badge.toLowerCase();
+      const badgeLevel = badgeLevels[badgeName] || 1;
       return Math.max(highestLevel, badgeLevel);
     }, 1);
   
